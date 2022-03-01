@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+.Titulo {
+  color: rgb(0, 47, 255);
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.linkNavBar {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.btnCarrito {
+  max-width: 45px;
+  max-height: 45px;
+  padding: 0;
+}
+
+.imgCarrito{
+  max-width: 30px;
+  max-height: 30px;
+  padding: 0;
+}
+
+.imgLogo {
+  max-width: 300px;
+  max-height: 300px;
+  padding: 0;
+}
