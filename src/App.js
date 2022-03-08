@@ -1,18 +1,15 @@
 import './App.css';
-import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import BarraNavegacion from './components/NavBar/NavBar';
 
 
 function App() {
   return (
    <div className='container'>
      <div className='row d-flex justify-content-between align-items-end'>
-      <a className='col-3' href='index.html'>
-        <img className='imgLogo' src='./img/logoMarca.jpg'/>
-      </a>
-      <div className='col-5'>
-      <NavBar/>
+      <div className='col'>
+      <BarraNavegacion/>
       </div>
       </div>
       <h1 className='Titulo'>Gustavo Velazco Design</h1>

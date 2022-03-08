@@ -1,5 +1,3 @@
-//Esto lo cree como el ejemplo de uso de Bootstrap para agregar productos para la pagina a futuro 
-
 
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
