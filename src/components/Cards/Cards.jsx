@@ -2,6 +2,7 @@
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
+import ItemCount from '../ItemCount/ItemCount'
 
 const Cards = () => {
     return ( 
@@ -19,11 +20,9 @@ const Cards = () => {
         <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
       </ListGroup>
-      <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
+      <ItemCount initial = {1} stock = {10} onAdd={" "}/>
     </Card>
+    
         )}
 
 export default Cards
