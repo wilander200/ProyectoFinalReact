@@ -38,23 +38,10 @@
 }
 
 .Titulo {
-  color: rgb(0, 47, 255);
+  color: black;
   margin: auto;
   width: fit-content;
   height: fit-content;
-}
-
-.linkNavBar {
-  color: black !important;
-  text-decoration: none !important;
-}
-
-ul {
-  list-style-type: none;
-  justify-content: space-around;
-  display: flex;
-  text-align: center;
-  align-items: flex-end;
 }
 
 .btnCarrito {
