@@ -13,7 +13,7 @@ function App() {
       <BarraNavegacion/>
       </div>
       </div>
-      <h1 className='Titulo'>Gustavo Velazco Design</h1>
+      <h1 className='Titulo my-3'>ALL MOUNTAIN BIKE</h1>
       <div className='row'>
         <ItemListContainer/>
       </div>

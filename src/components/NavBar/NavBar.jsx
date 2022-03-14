@@ -22,9 +22,8 @@ const BarraNavegacion = () => {
       >
         <Nav.Link href="index.html">INICIO</Nav.Link>
         <NavDropdown title="PRODUCTOS" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="vestidos.html">VESTIDOS</NavDropdown.Item>
-          <NavDropdown.Item href="faldas.html">FALDAS</NavDropdown.Item>
-          <NavDropdown.Item href="blusasRemeras.html">BLUSAS/REMERAS</NavDropdown.Item>
+          <NavDropdown.Item href="vestidos.html">BICICLETAS MTB</NavDropdown.Item>
+          <NavDropdown.Item href="faldas.html">BICICLETAS ELECTRICAS</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="ofertas.html">
             OFERTAS
