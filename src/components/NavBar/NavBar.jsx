@@ -2,7 +2,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import WidgetCar from './WidgetCar'
+import WidgetCar from '../Widget/WidgetCar'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
@@ -22,8 +22,8 @@ const BarraNavegacion = () => {
       >
         <Nav.Link href="index.html">INICIO</Nav.Link>
         <NavDropdown title="PRODUCTOS" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="vestidos.html">BICICLETAS MTB</NavDropdown.Item>
-          <NavDropdown.Item href="faldas.html">BICICLETAS ELECTRICAS</NavDropdown.Item>
+          <NavDropdown.Item href="biciMTE.html">BICICLETAS MTB</NavDropdown.Item>
+          <NavDropdown.Item href="eBikes.html">BICICLETAS ELECTRICAS</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="ofertas.html">
             OFERTAS
