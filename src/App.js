@@ -16,7 +16,7 @@ function App() {
       </div>
       <h1 className='Titulo my-3'>ALL MOUNTAIN BIKE</h1>
       <div className='row'>
-        {/* <ItemListContainer/> */}
+        <ItemListContainer/>
         <ItemDetailContainer/>
       </div>
     </div>
