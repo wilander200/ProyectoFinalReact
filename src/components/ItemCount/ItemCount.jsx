@@ -21,18 +21,17 @@ export default function ItemCount(props) {
         }
     }
 return (
-    <div > 
-        <div className="d-flex justify-content-around align-items-center m-1 p-1">
-            <Button className="w-25 h-25" variant="outline-dark" onClick = { subtracktItem }>-</Button>
-            <p>{count}</p>
-            <Button className="w-25 h-25" variant="outline-dark" onClick = {addItem} >+</Button>
+        <div className="d-flex justify-content-evenly align-items-center m-1 p-1">
+            <div className="w-50 d-flex justify-content-center align-content-center">
+                <Button className="w-25 h-25 mx-1" variant="outline-dark" onClick = { subtracktItem }>-</Button>
+                <p className="mx-2">{count}</p>
+                <Button className="w-25 h-25 mx-1" variant="outline-dark" onClick = {addItem} >+</Button>
+            </div>
+            <div className="w-50">
+                <Card.Body>
+                    {props.stock < 1 ? <p className="fw-bolder text-danger">AGOTADO</p> : <Button variant="outline-dark" onClick = {onAdd} >Agregar al Carrito</Button> }
+                </Card.Body>
+            </div>
         </div>
-        <div>
-            <Card.Body className='d-flex justify-content-around'>
-                {props.stock < 1 ? <p className="fw-bolder text-danger">AGOTADO</p> : <Button variant="outline-dark" onClick = {onAdd} >agregar</Button> }
-                <Button variant="outline-dark" >detalle</Button>
-            </Card.Body>
-        </div>
-    </div>
   )
 }

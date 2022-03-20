@@ -1,9 +1,19 @@
+import ItemCount from "../ItemCount/ItemCount";
 
 
-export default function ItemDetail() {
+export default function ItemDetail({product , name}) {
   return (
-    <div>
-              <ItemCount initial = {1} stock = {`${product.stock}`} onAdd={" "}/>
+    <div className="d-flex my-5">
+        <img className="w-50 border border-secondary mx-2" src={`${product.image}`} alt={`${product.name}`} />
+        <div className="w-50 mx-3 d-flex flex-column">
+            <h1 className="mx-auto">{product.name}</h1>
+            <p className="m-2 fs-4 text-start">{product.description}</p>
+            <div className="m-2 d-flex justify-content-around">
+                <p>Precio : {product.price.toLocaleString("es-CL")} CLP</p>
+                <p>Stock: {product.stock}</p>
+            </div>
+            <ItemCount initial = {1} stock = {`${product.stock}`} onAdd={" "}/>
+        </div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import BarraNavegacion from './components/NavBar/NavBar';
 import './App.css';
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       </div>
       <h1 className='Titulo my-3'>ALL MOUNTAIN BIKE</h1>
       <div className='row'>
-        <ItemListContainer/>
+        {/* <ItemListContainer/> */}
+        <ItemDetailContainer/>
       </div>
     </div>
     </BrowserRouter>
