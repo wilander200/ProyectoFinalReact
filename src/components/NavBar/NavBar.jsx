@@ -28,10 +28,10 @@ const BarraNavegacion = () => {
       >
           <NavLink className="nav-link active" to='/'>INICIO</NavLink>
         <NavDropdown title="PRODUCTOS" id="navbarScrollingDropdown">
-          <NavLink className="dropdown-item"  to='category/bikes'>
+          <NavLink className="dropdown-item"  to='/category/bikes'>
             BICICLETAS MTB
           </NavLink>
-          <NavLink className="dropdown-item"  to='category/ebikes' >
+          <NavLink className="dropdown-item"  to='/category/ebikes' >
             BICICLETAS ELECTRICAS
           </NavLink>
           <NavDropdown.Divider />

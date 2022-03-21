@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### `Carga del Drive con el video de como funciona` 
+
+video de la operación [https://drive.google.com/drive/folders/1YyfGlb78J-yDVf4f5B-PBQqKKXwEoBt0?usp=sharing]

@@ -11,11 +11,17 @@ export default function ItemDetailContainer() {
   const {detailId} = useParams ()
 
   useEffect(() => {
-      gFetch.then((data)=> setProducts(data))
-      .catch((err)=> console.log(err))
-      .finally(()=>setLoading(false))
+    if (detailId) {
+      setTimeout (() => {
+        gFetch
+        .then((data)=> setProducts(data))
+        .catch((err)=> console.log(err))
+        .finally(()=>setLoading(false))
+      }, 2000);
+  } 
   }, [detailId])
 
+  
 const id = detailId -1 
 
 return ( 
