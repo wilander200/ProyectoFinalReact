@@ -13,17 +13,17 @@ const prod = [
     { id: '12',category: "bikes", name: "Bicicleta XCO 27", description: "Bicicleta mtb para realizar XCO con aro de 27' y cuadro rígido", price: 850000, stock: 20, image: "./img/xco/xco27Rigida.jfif"},
     { id: '13',category: "bikes", name: "Bicicleta downhill 29", description: "Bicicleta mtb para realizar downhill con aro de 29' y doble suspención",price: 3800000, stock: 10, image: "./img/downhill/downHill29Doble.jfif"},
     { id: '14',category: "bikes", name: "Bicicleta downhill 27", description: "Bicicleta mtb para realizar downhill con aro de 27' y doble suspención",price: 3800000, stock: 5, image: "./img/downhill/downHill27Doble.jfif"},
-    { id: '15',category: "e-bikes", name: "E-bike downhill 29", description: "Bicicleta eléctrica mtb par realizar downhill con aro de 29' y doble suspencion", price: 1180000, stock: 12, image: "./img/ebikes/ebikeDownhill.jfif"},
-    { id: '16',category: "e-bikes", name: "E-bike enduro 29", description:  "Bicicleta eléctrica mtb par realizar enduro con aro de 29' y doble suspencion", price: 7400000, stock: 15, image: "./img/ebikes/ebikeEnduro.jfif"},
-    { id: '17',category: "e-bikes", name: "E-bike trial 29", description:  "Bicicleta eléctrica mtb par realizar trail con aro de 29' y doble suspencion", price: 7500000, stock: 18, image: "./img/ebikes/ebiketrail.jfif"},
-    { id: '18',category: "e-bikes", name: "E-bike XCO 29", description:  "Bicicleta eléctrica mtb par realizar XCO con aro de 29' y cuadro rígido", price: 3500000, stock: 15, image: "./img/ebikes/ebikeRigida.jfif"},
+    { id: '15',category: "ebikes", name: "E-bike downhill 29", description: "Bicicleta eléctrica mtb par realizar downhill con aro de 29' y doble suspencion", price: 1180000, stock: 12, image: "./img/ebikes/ebikeDownhill.jfif"},
+    { id: '16',category: "ebikes", name: "E-bike enduro 29", description:  "Bicicleta eléctrica mtb par realizar enduro con aro de 29' y doble suspencion", price: 7400000, stock: 15, image: "./img/ebikes/ebikeEnduro.jfif"},
+    { id: '17',category: "ebikes", name: "E-bike trial 29", description:  "Bicicleta eléctrica mtb par realizar trail con aro de 29' y doble suspencion", price: 7500000, stock: 18, image: "./img/ebikes/ebiketrail.jfif"},
+    { id: '18',category: "ebikes", name: "E-bike XCO 29", description:  "Bicicleta eléctrica mtb par realizar XCO con aro de 29' y cuadro rígido", price: 3500000, stock: 15, image: "./img/ebikes/ebikeRigida.jfif"},
 ]
 export const gFetch = new Promise ((resolve , reject)=>{
         let condition = true
          if (condition) {
              setTimeout (() => {
              resolve(prod)
-             }, 3000);
+             }, 2000);
         } 
          else {
              reject('Error 404')   

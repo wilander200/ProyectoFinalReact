@@ -18,7 +18,8 @@ function App() {
         <h1 className='Titulo my-3'>ALL MOUNTAIN BIKE</h1>
         <Routes>
             <Route path="/" element={<ItemListContainer/>}/>
-            <Route path='/detalle' element={<ItemDetailContainer/>}/>
+            <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+            <Route path='/detail/:detailId' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<Cart/>} />
             <Route path="/*" element={<Navigate to='/'/>}/>
         </Routes>

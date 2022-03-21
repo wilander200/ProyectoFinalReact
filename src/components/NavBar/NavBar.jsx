@@ -6,13 +6,19 @@ import WidgetCar from '../Widget/WidgetCar'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
+import { NavLink, Link } from 'react-router-dom'
 
 const BarraNavegacion = () => {
     return ( 
 
 <Navbar bg="white" expand="md">
   <Container fluid>
-  <Navbar.Brand href="index.html"><img className='imgLogo' src='./img/logoMarca.jpg'/></Navbar.Brand>
+    
+      <Navbar.Brand>
+        <NavLink to= '/'>
+          <img className='imgLogo' src='./img/logoMarca.jpg'/>
+        </NavLink>
+      </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -20,11 +26,16 @@ const BarraNavegacion = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="index.html">INICIO</Nav.Link>
+          <NavLink className="nav-link active" to='/'>INICIO</NavLink>
         <NavDropdown title="PRODUCTOS" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="biciMTE.html">BICICLETAS MTB</NavDropdown.Item>
-          <NavDropdown.Item href="eBikes.html">BICICLETAS ELECTRICAS</NavDropdown.Item>
+          <NavLink className="dropdown-item"  to='category/bikes'>
+            BICICLETAS MTB
+          </NavLink>
+          <NavLink className="dropdown-item"  to='category/ebikes' >
+            BICICLETAS ELECTRICAS
+          </NavLink>
           <NavDropdown.Divider />
+          {/*  hay que hacer un componente que trabaje estas cosas aparte */}
           <NavDropdown.Item href="ofertas.html">
             OFERTAS
           </NavDropdown.Item>
@@ -35,7 +46,7 @@ const BarraNavegacion = () => {
         <Nav.Link href="contacto.html">CONTACTO</Nav.Link>
         
       </Nav>
-      <Form className="d-flex">
+      <Form className="d-flex mx-2">
         <FormControl
           type="search"
           placeholder="Search"
@@ -44,7 +55,9 @@ const BarraNavegacion = () => {
         />
         <Button variant="outline-secondary">Search</Button>
       </Form>
-      <Nav.Link href="carrito.html"><WidgetCar></WidgetCar></Nav.Link>
+      <NavLink to='cart'>
+        <WidgetCar/>
+      </NavLink>
     </Navbar.Collapse>
   </Container>
 </Navbar>
