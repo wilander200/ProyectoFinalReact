@@ -27,7 +27,7 @@ function ItemListContainer () {
 
 return ( 
     <>
-        { loading ? <img className="w-25 mx-auto " src="./img/loading.gif" alt="loading" />
+        { loading ? <img className="w-25 mx-auto " src="/img/loading.gif" alt="loading" />
         :
             <ItemList products={products}/>
         }

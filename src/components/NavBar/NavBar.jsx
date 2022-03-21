@@ -16,7 +16,7 @@ const BarraNavegacion = () => {
     
       <Navbar.Brand>
         <NavLink to= '/'>
-          <img className='imgLogo' src='./img/logoMarca.jpg'/>
+          <img className='imgLogo' src='/img/logoMarca.jpg'/>
         </NavLink>
       </Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />

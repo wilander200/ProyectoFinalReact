@@ -20,7 +20,7 @@ const id = detailId -1
 
 return ( 
   <>
-      { loading ? <img className="w-25 mx-auto " src="./img/loading.gif" alt="loading" />
+      { loading ? <img className="w-25 mx-auto " src="/img/loading.gif" alt="loading" />
       :
           <ItemDetail product={products[id]} name="will"/>
       }
