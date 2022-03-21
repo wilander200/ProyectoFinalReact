@@ -19,7 +19,7 @@ return (
   <>
       { loading ? <img className="w-25 mx-auto " src="./img/loading.gif" alt="loading" />
       :
-          <ItemDetail product={products[4]} name="will"/>
+          <ItemDetail product={products[1]} name="will"/>
       }
   </>
   )
