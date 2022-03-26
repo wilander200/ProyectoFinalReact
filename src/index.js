@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { FirebaseApp } from 'firebase/app';
 
+//getFireStoreApp
 
 ReactDOM.render(
   <React.StrictMode>
