@@ -15,11 +15,10 @@ export default function ItemCount(props) {
             }
         }
     
-    const onAdd = () => {
-        if (props.stock > 0) {
-            alert(count)
-        }
+    const addition = () => {
+        props.onAdd (count)
     }
+
 return (
         <div className="d-flex justify-content-evenly align-items-center m-1 p-1">
             <div className="w-50 d-flex justify-content-center align-content-center">
@@ -29,7 +28,7 @@ return (
             </div>
             <div className="w-50">
                 <Card.Body>
-                    {props.stock < 1 ? <p className="fw-bolder text-danger">AGOTADO</p> : <Button variant="outline-dark" onClick = {onAdd} >Agregar al Carrito</Button> }
+                    {props.stock < 1 ? <p className="fw-bolder text-danger">AGOTADO</p> : <Button variant="outline-dark" onClick = {addition} >Agregar al Carrito</Button> }
                 </Card.Body>
             </div>
         </div>

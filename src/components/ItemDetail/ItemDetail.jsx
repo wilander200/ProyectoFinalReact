@@ -1,7 +1,18 @@
+import { Button } from "react-bootstrap";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
 
-export default function ItemDetail({product , name}) {
+export default function ItemDetail({product}) {
+
+    const [isCant, setIsCant] = useState(false)
+
+    const onAdd = (cantidad) => {
+        console.log(cantidad)
+        setIsCant(true)
+    }
+
   return (
     <div className="d-flex my-5 justify-content-between">
         <img className="img-fluid h-25 w-50 border border-secondary" src={`${product.image}`} alt={`${product.name}`} />
@@ -12,7 +23,19 @@ export default function ItemDetail({product , name}) {
                 <p>Precio : {product.price.toLocaleString("es-CL")} CLP</p>
                 <p>Stock: {product.stock}</p>
             </div>
-            <ItemCount initial = {1} stock = {`${product.stock}`} onAdd={" "}/>
+            {isCant ?
+                <div className="d-flex justify-content-around">
+                    <Link to = '/'>
+                        <Button variant="outline-dark">Continuar comprando</Button>
+                    </Link>
+                    <Link to = '/cart'>
+                        <Button variant="outline-dark">Terminar mi compra</Button>
+                    </Link>
+                </div>
+                :
+                <ItemCount initial = {1} stock = {`${product.stock}`} onAdd={onAdd}/>
+
+            }
         </div>
     </div>
   )

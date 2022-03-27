@@ -35,15 +35,11 @@ const BarraNavegacion = () => {
             BICICLETAS ELECTRICAS
           </NavLink>
           <NavDropdown.Divider />
-          {/*  hay que hacer un componente que trabaje estas cosas aparte */}
-          <NavDropdown.Item href="ofertas.html">
-            OFERTAS
-          </NavDropdown.Item>
-          <NavDropdown.Item href="guias.html">
+          <NavLink className="dropdown-item" to='/guiaTalla'>
             GUIA DE TALLAS
-          </NavDropdown.Item>
+          </NavLink>
         </NavDropdown>
-        <Nav.Link href="contacto.html">CONTACTO</Nav.Link>
+        <NavLink className='nav-link active' to='/contacto'>CONTACTO</NavLink>
         
       </Nav>
       <Form className="d-flex mx-2">

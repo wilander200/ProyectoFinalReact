@@ -14,21 +14,18 @@ export default function ItemDetailContainer() {
     if (detailId) {
       setTimeout (() => {
         gFetch
-        .then((data)=> setProducts(data))
+        .then((data)=> setProducts(data.find((d)=>d.id===detailId)))
         .catch((err)=> console.log(err))
         .finally(()=>setLoading(false))
       }, 2000);
   } 
   }, [detailId])
 
-  
-const id = detailId -1 
-
 return ( 
   <>
       { loading ? <img className="w-25 mx-auto " src="/img/loading.gif" alt="loading" />
       :
-          <ItemDetail product={products[id]} name="will"/>
+          <ItemDetail product={products}/>
       }
   </>
   )

@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import BarraNavegacion from './components/NavBar/NavBar';
-import './App.css';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
+import GuiaTalla from './components/GuiaTalla/GuiaTalla';
+import Contacto from './Contacto/Contacto';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -21,6 +24,8 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
             <Route path='/detail/:detailId' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/guiaTalla' element={<GuiaTalla/>} />
+            <Route path='/contacto' element={<Contacto/>} />
             <Route path="/*" element={<Navigate to='/'/>}/>
         </Routes>
       </div>
