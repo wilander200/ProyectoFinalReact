@@ -4,7 +4,7 @@ import BarraNavegacion from './components/NavBar/NavBar';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
 import GuiaTalla from './components/GuiaTalla/GuiaTalla';
-import Contacto from './Contacto/Contacto';
+import Contacto from './components/Contacto/Contacto';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
