@@ -1,17 +1,20 @@
 import { Button } from "react-bootstrap";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { CartContext } from "../../context/CartContext";
 
 
 export default function ItemDetail({product}) {
 
+    const {addToCart} = useContext(CartContext)
     const [isCant, setIsCant] = useState(false)
 
-    const onAdd = (cantidad) => {
-        console.log(cantidad)
+    const onAdd = (count) => {
         setIsCant(true)
+        addToCart({...product, cantidad: count})
     }
+
 
   return (
     <div className="d-flex my-5 justify-content-between">

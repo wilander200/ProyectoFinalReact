@@ -1,18 +1,47 @@
 import React, { createContext , useState } from 'react'
-import ItemListContainer from '../containers/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from '../containers/ItemDetailContainer/ItemDetailContainer';
 
-export default function CartContext({children}) {
-    const contextCart = createContext ([]);
-    const [cartList, setcartList] = useState([])
 
-    const addToCart = (item) => {
-        setcartList([...cartList, item])
+export const CartContext = createContext([]) 
+
+
+ function CartContextProvider({children}) {
+    const [cartList, setCartList] = useState([])
+
+    const addToCart = (product) => {
+      const repeatProduct = cartList.find(List => List.id === product.id)  
+      if (repeatProduct) {
+        repeatProduct.cantidad = repeatProduct.cantidad + product.cantidad
+        setCartList([...cartList])
+      }else {
+        
+        setCartList([...cartList, product])
+        };
+      }
+      console.log(cartList)
+
+    const erraseCart = () => {
+        setCartList([])
+    }
+
+    const erraseItem = (product) => {
+      const erraseProduct = cartList.find(item => item.id === product)
+      if (erraseProduct) {
+        const idx = cartList.indexOf(erraseProduct)
+        cartList.splice(idx,1)
+        setCartList([...cartList])
+      }
     }
 
   return (
-    <contextCart.Provider value={ {cartList} }> 
+    <CartContext.Provider value={ {
+        cartList,
+        addToCart,
+        erraseCart,
+        erraseItem
+      } }> 
         {children}
-    </contextCart.Provider>
+    </CartContext.Provider>
   )
-}
+    }
+
+export default CartContextProvider
