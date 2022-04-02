@@ -17,27 +17,32 @@ export const CartContext = createContext([])
         setCartList([...cartList, product])
         };
       }
-      console.log(cartList)
 
     const erraseCart = () => {
         setCartList([])
     }
 
-    const erraseItem = (product) => {
-      const erraseProduct = cartList.find(item => item.id === product)
-      if (erraseProduct) {
-        const idx = cartList.indexOf(erraseProduct)
-        cartList.splice(idx,1)
-        setCartList([...cartList])
-      }
+    const erraseItem = (productId) => {
+      setCartList(cartList.filter(errase => errase.id !== productId))
     }
+
+    const totalPrice = () => {
+      return cartList.reduce((acumulado, prods) => acumulado = acumulado + (prods.price*prods.cantidad) , 0)
+    }
+
+    const totalCant = () => {
+      return cartList.reduce((guardado, prod) => guardado += prod.cantidad, 0)
+    }
+
 
   return (
     <CartContext.Provider value={ {
         cartList,
         addToCart,
         erraseCart,
-        erraseItem
+        erraseItem,
+        totalPrice,
+        totalCant
       } }> 
         {children}
     </CartContext.Provider>
