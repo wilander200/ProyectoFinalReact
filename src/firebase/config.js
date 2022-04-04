@@ -13,6 +13,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const getFireStoreApp = () => {
+export const getFireStoreApp = () => { 
     return app
 }

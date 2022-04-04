@@ -34,7 +34,7 @@ export default function Cart() {
                 <p className="col-2 ">{prods.price.toLocaleString("es-CL")} CLP</p>
                 <p className="col-2 ">{prods.cantidad}</p>
                 <p className="col-2 ">{(prods.cantidad*prods.price).toLocaleString("es-CL")} CLP</p>
-                <Button className="col-2 " variant="outline-danger" onClick={() => erraseItem(prods.id)} >Eliminar Item</Button>
+                <Button className="col-2 h-75" variant="outline-danger" onClick={() => erraseItem(prods.id)} >Eliminar Item</Button>
               </div>
             ) }
           </div>

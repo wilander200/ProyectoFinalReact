@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { FirebaseApp } from 'firebase/app';
+import {getFireStoreApp} from './firebase/config'
 
-//getFireStoreApp
+getFireStoreApp()
 
 ReactDOM.render(
   <React.StrictMode>

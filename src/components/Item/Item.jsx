@@ -16,7 +16,7 @@ function Item({product}) {
           </Card.Title>
         </Card.Body>
         <ListGroup className="list-group-flush ">
-          <ListGroupItem className='d-flex justify-content-center fs-5 border-white'>{`Precio: ${product.price.toLocaleString("es-CL")}`}</ListGroupItem>
+          <ListGroupItem className='d-flex justify-content-center fs-5 border-white'>{`Precio: ${product.price.toLocaleString("es-CL")} CLP`}</ListGroupItem>
           <Link to={`/detail/${product.id}`}>
             <Button className="w-50 mx-auto my-2" variant="outline-dark">DETALLE</Button>
           </Link>

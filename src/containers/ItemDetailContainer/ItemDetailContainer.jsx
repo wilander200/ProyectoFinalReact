@@ -1,7 +1,7 @@
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 import { useState , useEffect } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "../../components/ItemDetail/ItemDetail"
-import { gFetch } from "../../helpers/productos"
 
 
 export default function ItemDetailContainer() {
@@ -10,6 +10,9 @@ export default function ItemDetailContainer() {
   
   const {detailId} = useParams ()
 
+  // para usar cuando se acabe la base de datos de firestore
+
+  /* 
   useEffect(() => {
     if (detailId) {
       setTimeout (() => {
@@ -18,8 +21,23 @@ export default function ItemDetailContainer() {
         .catch((err)=> console.log(err))
         .finally(()=>setLoading(false))
       }, 2000);
-  } 
+    } 
   }, [detailId])
+  */
+
+  // para usar con la base de datos de firestore
+
+  useEffect(() => {
+    setTimeout(() => {
+      const dataBase = getFirestore()
+      const queryDoc = doc(dataBase , 'productos' , detailId)
+      getDoc(queryDoc)
+      .then(resp => setProducts({id: resp.id, ...resp.data()}))
+      .catch((err)=> console.log(err))
+      .finally(()=>setLoading(false))
+    }, 2000)
+  }, [detailId])
+
 
 return ( 
   <>
