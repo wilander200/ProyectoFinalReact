@@ -7,7 +7,10 @@ import { CartContext } from "../../context/CartContext"
 export default function Cart() {
 
   const {cartList, erraseCart, erraseItem, totalPrice} = useContext(CartContext)
-  console.log(cartList)
+
+  function newOrder (e) {
+    console.log(cartList)
+  }
 
   return (
     <div className="container">
@@ -41,7 +44,7 @@ export default function Cart() {
           <div>
             <h3> {`Monto total de la compra : ${totalPrice().toLocaleString("es-CL")} CLP`}</h3>
             <Button className="m-3" onClick={erraseCart} variant="outline-danger">Vaciar carrito</Button>
-            <Button className="m-3" variant="outline-success">Proceder al Pago</Button>
+            <Button className="m-3" variant="outline-success" onClick={newOrder}>Generar Orden</Button>
           </div>
         </div>
       }
