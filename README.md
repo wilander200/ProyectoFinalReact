@@ -69,6 +69,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### `Link para visitar el sitio web`
+
+https://wilander-velazco-final-reactjs.netlify.app/
 
 ### `Carga del Drive con el video de como funciona` 
 
