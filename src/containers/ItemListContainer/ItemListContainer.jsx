@@ -10,26 +10,6 @@ function ItemListContainer () {
 
     const {categoryId} = useParams ()
     
-    // Lo usaré despues cuando se acabe la prueba de la base de datos del firestore
-
-    /*  useEffect(() => {
-        if (categoryId) {
-            gFetch
-            .then((data)=> setProducts(data.filter(product => product.category === categoryId)))
-            .catch((err)=> console.log(err))
-            .finally(()=>setLoading(false))
-        } else {
-            gFetch
-            .then((data)=> setProducts(data))
-            .catch((err)=> console.log(err))
-            .finally(()=>setLoading(false))
-        }
-    }, [categoryId])*/
-    
-
-    //usando la base de datos del firestore
-
-
     useEffect(() => {
         const dataBase = getFirestore()
         const queryCollection = collection(dataBase, 'productos' )
@@ -40,7 +20,6 @@ function ItemListContainer () {
         .finally(() => setLoading(false))
 
     }, [categoryId])
-
 
 return ( 
     <>

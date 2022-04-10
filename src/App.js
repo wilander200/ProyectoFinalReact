@@ -21,7 +21,7 @@ function App() {
               <BarraNavegacion/>
             </div>
           </div>
-          <h1 className='Titulo my-3'>ALL MOUNTAIN BIKE</h1>
+          <h1 className='titulo my-3'>ALL MOUNTAIN BIKE</h1>
           <Routes>
               <Route path="/" element={<ItemListContainer/>}/>
               <Route path="/category/:categoryId" element={<ItemListContainer/>}/>

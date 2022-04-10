@@ -10,23 +10,6 @@ export default function ItemDetailContainer() {
   
   const {detailId} = useParams ()
 
-  // para usar cuando se acabe la base de datos de firestore
-
-  /* 
-  useEffect(() => {
-    if (detailId) {
-      setTimeout (() => {
-        gFetch
-        .then((data)=> setProducts(data.find((d)=>d.id===detailId)))
-        .catch((err)=> console.log(err))
-        .finally(()=>setLoading(false))
-      }, 2000);
-    } 
-  }, [detailId])
-  */
-
-  // para usar con la base de datos de firestore
-
   useEffect(() => {
     setTimeout(() => {
       const dataBase = getFirestore()
