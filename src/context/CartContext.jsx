@@ -8,9 +8,9 @@ export const CartContext = createContext([])
     const [cartList, setCartList] = useState([])
 
     const addToCart = (product) => {
-      const repeatProduct = cartList.find(List => List.id === product.id)  
+      const repeatProduct = cartList.find(list => list.id === product.id)  
       if (repeatProduct) {
-        repeatProduct.cantidad = repeatProduct.cantidad + product.cantidad
+        repeatProduct.quantity = repeatProduct.quantity + product.quantity
         setCartList([...cartList])
       }else {
         
@@ -27,11 +27,11 @@ export const CartContext = createContext([])
     }
 
     const totalPrice = () => {
-      return cartList.reduce((acumulado, prods) => acumulado = acumulado + (prods.price*prods.cantidad) , 0)
+      return cartList.reduce((accumulated, prods) => accumulated = accumulated + (prods.price*prods.quantity) , 0)
     }
 
-    const totalCant = () => {
-      return cartList.reduce((guardado, prod) => guardado += prod.cantidad, 0)
+    const totalQuantity = () => {
+      return cartList.reduce((accumulated, prod) => accumulated += prod.quantity, 0)
     }
 
 
@@ -42,7 +42,7 @@ export const CartContext = createContext([])
         erraseCart,
         erraseItem,
         totalPrice,
-        totalCant
+        totalQuantity
       } }> 
         {children}
     </CartContext.Provider>

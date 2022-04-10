@@ -8,11 +8,11 @@ import { CartContext } from "../../context/CartContext";
 export default function ItemDetail({product}) {
 
     const {addToCart} = useContext(CartContext)
-    const [isCant, setIsCant] = useState(false)
+    const [isQuantity, setIsQuantity] = useState(false)
 
     const onAdd = (count) => {
-        setIsCant(true)
-        addToCart({...product, cantidad: count})
+        setIsQuantity(true)
+        addToCart({...product, quantity: count})
     }
 
 
@@ -26,7 +26,7 @@ export default function ItemDetail({product}) {
                 <p>Precio : {product.price.toLocaleString("es-CL")} CLP</p>
                 <p>Stock: {product.stock}</p>
             </div>
-            {isCant ?
+            {isQuantity ?
                 <div className="d-flex justify-content-around">
                     <Link to = '/'>
                         <Button variant="outline-dark">Continuar comprando</Button>

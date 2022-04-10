@@ -3,12 +3,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import WidgetCar from '../Widget/WidgetCar'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const BarraNavegacion = () => {
+const NavigationBar = () => {
     return ( 
 
 <Navbar bg="white" expand="md">
@@ -39,18 +36,8 @@ const BarraNavegacion = () => {
             GUIA DE TALLAS
           </NavLink>
         </NavDropdown>
-        <NavLink className='nav-link active' to='/contacto'>CONTACTO</NavLink>
-        
+        <NavLink className='nav-link active' to='/contacto'>CONTACTO</NavLink>       
       </Nav>
-      <Form className="d-flex mx-2">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-secondary">Search</Button>
-      </Form>
       <NavLink to='cart'>
         <WidgetCar/>
       </NavLink>
@@ -59,4 +46,4 @@ const BarraNavegacion = () => {
 </Navbar>
     )}
 
-export default BarraNavegacion
+export default NavigationBar

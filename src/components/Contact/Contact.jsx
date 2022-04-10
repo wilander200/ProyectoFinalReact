@@ -1,6 +1,4 @@
-
-
-export default function Contacto() {
+export default function Contact() {
   return (
     <>
     <h3 className="h4 text-danger">CONTACTE CON NOSOTROS</h3>

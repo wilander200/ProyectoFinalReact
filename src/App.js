@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
-import BarraNavegacion from './components/NavBar/NavBar';
+import NavigationBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart'
-import GuiaTalla from './components/GuiaTalla/GuiaTalla';
-import Contacto from './components/Contacto/Contacto';
+import SizeGuide from './components/SizeGuide/SizeGuide';
+import Contact from './components/Contact/Contact';
 import CartContextProvider from './context/CartContext';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +18,7 @@ function App() {
         <div className='container App'>
           <div className='row d-flex justify-content-between align-items-end'>
             <div className='col'>
-              <BarraNavegacion/>
+              <NavigationBar/>
             </div>
           </div>
           <h1 className='titulo my-3'>ALL MOUNTAIN BIKE</h1>
@@ -27,8 +27,8 @@ function App() {
               <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
               <Route path='/detail/:detailId' element={<ItemDetailContainer/>}/>
               <Route path='/cart' element={<Cart/>} />
-              <Route path='/guiaTalla' element={<GuiaTalla/>} />
-              <Route path='/contacto' element={<Contacto/>} />
+              <Route path='/guiaTalla' element={<SizeGuide/>} />
+              <Route path='/contacto' element={<Contact/>} />
               <Route path="/*" element={<Navigate to='/'/>}/>
           </Routes>
         </div>
