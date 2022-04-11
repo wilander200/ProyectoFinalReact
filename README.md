@@ -6,7 +6,7 @@ https://wilander-velazco-final-reactjs.netlify.app/
 
 ### `Carga del Drive con el video de como funciona` 
 
-video de la operación [https://drive.google.com/drive/folders/1YyfGlb78J-yDVf4f5B-PBQqKKXwEoBt0?usp=sharing]
+video de la operación https://drive.google.com/file/d/1VOl-y1U7E3NUNjxaFg5xzvvScLXbBN72/view?usp=sharing
 
 ### `Caracteristicas de lo que se buscaba`
 
